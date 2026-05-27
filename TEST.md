@@ -10,7 +10,7 @@ cd /home
 ```
 
 
-[un liens vers Bienvenue](Bienvenue)
+%% [un liens vers Bienvenue](Bienvenue) %%
 
 ## cecci est soustritre
 
@@ -171,4 +171,3 @@ jgjhgjhgjhgjg `kjhjkhjkhkj` ;kjlkjlkj
 
 jhghkhk
 
-![[Pasted image 20260515165854.png]]![[Pasted image 20260515165908.png]]

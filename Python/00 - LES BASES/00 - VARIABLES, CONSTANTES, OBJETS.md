@@ -8,7 +8,7 @@
 ➡️ Est **typée dynamiquement** — Python trouve le type tout seul
 ➡️ Peut **changer de type** en cours de programme 
 
-#### 💡 exemple
+### 💡 <span style="color: cyan;">Exemple</span>
 
 ``` python
 age = 25          # Python voit un entier → int
@@ -18,6 +18,8 @@ prenom = "Sara"   # Python voit des guillemets → str
 ```
 
 
+---
+
 ## 📦 Les Constantes
 
 ⚠️  Une constante, c'est comme une variable mais dont la valeur **ne doit pas être modifiée** pendant le programme. En Python, on l'écrit en **MAJUSCULES** pour signaler aux autres développeurs de ne pas y toucher
@@ -26,7 +28,7 @@ prenom = "Sara"   # Python voit des guillemets → str
 ➡️ En MAJUSCULES_AVEC_UNDERSCORE
 ➡️  Est définie **une seule fois** au début du programme
 
-### 💡 exemple
+### 💡 <span style="color: cyan;">Exemple</span>
 
 ``` python
 PI = 3.14159
@@ -38,10 +40,13 @@ PI = 5  # non !
 ```
 
 
+---
+
 ## 📦 Les Objets
 
 ⚠️  Un objet, c'est ce que la variable pointe. En Python tout est objet — un str, un int, une liste... Chaque objet a un type, une valeur, et des méthodes intégrées qu'on peut utiliser.
-### 💡 exemple
+
+### 💡 <span style="color: cyan;">Exemple</span>
 
 ``` python
 prenom = "Sara" # "Sara" est un objet de type str

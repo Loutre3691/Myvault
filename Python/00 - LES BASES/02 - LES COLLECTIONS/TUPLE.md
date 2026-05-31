@@ -1,0 +1,132 @@
+⚠️ Comme une liste, mais **verrouillée** — on ne peut plus la modifier après création. Il s'écrit avec des **parenthèses** `( )`
+
+➡️ Les index fonctionnent **exactement comme les listes** (commence à 0) 
+➡️ On l'utilise pour des données qui **ne doivent jamais changer**
+➡️ Plus **rapide** qu'une liste en mémoire (Python l'optimise)
+
+### 📦 Accéder aux éléments
+
+⚠️ Même logique que les listes, avec les index
+
+```python
+jours = ("lundi", "mardi", "mercredi", "jeudi", "vendredi")
+
+print(jours[0])    # → lundi
+print(jours[-1])   # → vendredi
+print(jours[1:3])  # → ("mardi", "mercredi")  le slicing fonctionne aussi !
+```
+
+
+---
+
+### 📦 Ce qu'on NE peut PAS faire
+
+⚠️ Un tuple est **immuable** — toute tentative de modification provoque une erreur
+
+```python
+coordonnees = (48.8566, 2.3522)
+
+coordonnees[0] = 50       # ❌ ERREUR ! TypeError
+coordonnees.append(3)     # ❌ ERREUR ! pas de .append()
+coordonnees.remove(3)     # ❌ ERREUR ! pas de .remove()
+```
+
+
+---
+
+### 📦 Ce qu'on PEUT faire
+
+⚠️ Chercher et lire
+```python
+point = (10, 20, 10, 30, 10)
+
+print(len(point))          # → 5       taille du tuple
+print(10 in point)         # → True    est-ce que 10 existe ?
+print(point.index(20))     # → 1       à quel index est 20 ?
+print(point.count(10))     # → 3       combien de fois apparaît 10 ?
+print(min(point))          # → 10      valeur minimale
+print(max(point))          # → 30      valeur maximale
+print(sum(point))          # → 80      somme
+```
+
+---
+
+### 📦 Le tuple à un seul élément  == piège !
+
+⚠️ Un tuple avec **un seul élément** doit avoir une **virgule** à la fin, sinon Python croit que c'est juste des parenthèses !
+
+
+```python
+pas_un_tuple = (42)       # ❌ Python voit juste le nombre 42
+print(type(pas_un_tuple)) # → <class 'int'>  😱
+
+vrai_tuple = (42,)        # ✅ la virgule dit à Python que c'est un tuple
+print(type(vrai_tuple))   # → <class 'tuple'>  ✅
+```
+
+---
+
+### 📦 Unpacking — déballer un tuple
+
+⚠️ On peut **assigner chaque élément à une variable** en une seule ligne 
+
+
+```python
+coordonnees = (48.8566, 2.3522)
+
+latitude, longitude = coordonnees
+print(latitude)    # → 48.8566
+print(longitude)   # → 2.3522
+```
+
+#### 💡 <span style="color: cyan;">Exemple</span>
+
+```python
+personne = ("Sara", 25, "Paris")
+
+nom, age, ville = personne
+print(nom)    # → Sara
+print(age)    # → 25
+print(ville)  # → Paris
+```
+
+---
+
+### 📦 Tuple vs Liste — quand choisir quoi ?
+
+⚠️ La règle simple :
+```
+Les données peuvent changer ?   → list   ["lundi", "mardi"]
+Les données ne changent jamais ? → tuple  ("lundi", "mardi")
+```
+
+#### 💡 <span style="color: cyan;">Exemple </span>
+
+```python
+# TUPLE — choses fixes
+jours_semaine = ("lundi", "mardi", "mercredi", "jeudi", "vendredi")
+coordonnees_paris = (48.8566, 2.3522)
+couleurs_arc_en_ciel = ("rouge", "orange", "jaune", "vert", "bleu", "violet")
+
+# LIST — choses qui évoluent
+panier_courses = ["pomme", "lait", "pain"]
+scores_joueurs = [1500, 2300, 980]
+```
+
+---
+
+### 🔍 RECAP
+
+```
+len(tuple)       → nombre d'éléments
+.index(x)        → retourne l'index de x
+.count(x)        → compte les occurrences de x
+min(tuple)       → valeur minimale
+max(tuple)       → valeur maximale
+sum(tuple)       → somme (nombres uniquement)
+x in tuple       → True si x existe dans le tuple
+slicing [i:j]    → extrait une portion (lecture seule)
+unpacking        → a, b = (1, 2) assigne chaque valeur à une variable
+```
+
+⚠️ Pas de `.append()`, `.remove()`, `.pop()`, `.sort()`, `.clear()` — le tuple ne se modifie pas !

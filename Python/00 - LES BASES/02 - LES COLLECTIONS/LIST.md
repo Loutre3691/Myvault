@@ -1,0 +1,171 @@
+
+⚠️  C'est la collection la plus utilisée. Elle s'écrit avec des **crochets** `[ ]`. 
+
+➡️  Les index **positifs** partent du début (0), les **négatifs** partent de la fin (-1).
+➡️ Une liste peut contenir **d'autres listes** ! C'est ce qu'on appelle une liste à **deux dimensions** — très utilisé pour représenter des tableaux.
+
+#### 💡 <span style="color: cyan;">Exemple</span>
+
+``` python
+fruits = ["pomme", "banane", "cerise"]
+nombres = [10, 20, 30, 40]
+melange = ["Sara", 25, True, 3.14]  # on peut mélanger les types
+```
+
+
+###  📦  Le Slicing - decouper une liste 
+⚠️  Permet d'extraire une portion d'une liste avec [debut:fin] (le debut est inclus, la fin est exclue)
+
+#### 💡 <span style="color: cyan;">Exemple</span>
+
+``` python
+fruits = ["pomme", "banane", "cerise", "kiwi", "mangue"]
+
+print(fruits[1:3])    # → ["banane", "cerise"]   (index 1 et 2, pas 3)
+print(fruits[0:2])    # → ["pomme", "banane"]
+print(fruits[2:])     # → ["cerise", "kiwi", "mangue"]  (jusqu'à la fin)
+print(fruits[:3])     # → ["pomme", "banane", "cerise"] (depuis le début)
+print(fruits[:])      # → copie toute la liste
+```
+
+
+---
+
+### 📦  Connaitre la taille d'une liste 
+
+⚠️  len()
+``` python
+fruits = ["pomme", "banane", "cerise"]
+print(len(fruits))    # → 3
+```
+
+---
+### 📦 Chercher dans une liste
+
+⚠️  Est ce qu'un element existe ?
+``` python
+fruits = ["pomme", "banane", "cerise"]
+
+print("banane" in fruits)      # → True
+print("kiwi" in fruits)        # → False
+print("kiwi" not in fruits)    # → True
+```
+
+⚠️  À quel index est un élément ?
+``` python
+print(fruits.index("cerise")) # → 2
+```
+
+⚠️  Combien de fois apparaît un élément ?
+``` python
+notes = [15, 18, 15, 12, 15]
+print(notes.count(15))         # → 3
+```
+
+
+---
+
+### 📦  Modifier une liste
+
+
+⚠️ Ajouter des éléments
+``` python
+fruits = ["pomme", "banane"]
+
+fruits.append("kiwi")           # ajoute à la fin
+print(fruits)                   # → ["pomme", "banane", "kiwi"]
+
+fruits.insert(1, "mangue")      # insère à l'index 1
+print(fruits)                   # → ["pomme", "mangue", "banane"]
+```
+
+⚠️  Supprimer des elements
+``` python
+
+fruits = ["pomme", "mangue", "banane", "kiwi"]
+
+fruits.remove("banane")         # supprime par valeur (la 1ère trouvée)
+print(fruits)                   # → ["pomme", "mangue", "kiwi"]
+
+fruits.pop()                    # supprime le dernier élément
+print(fruits)                   # → ["pomme", "mangue", "banane"]
+
+fruits.pop(0)                   # supprime à l'index 0
+print(fruits)                   # → [mangue", "banane", "kiwi"]
+
+
+```
+
+⚠️  Vider une liste
+``` python
+fruits.clear()
+print(fruits)                   # → []
+```
+
+⚠️  Trier une liste
+``` python
+nombres = [30, 10, 50, 20, 40]
+
+nombres.sort()                  # trie dans l'ordre croissant (modifie la liste)
+print(nombres)                  # → [10, 20, 30, 40, 50]
+
+nombres.sort(reverse=True)      # trie dans l'ordre décroissant
+print(nombres)                  # → [50, 40, 30, 20, 10]
+
+nombres.reverse()               # inverse simplement l'ordre actuel
+print(nombres)                  # → [40, 20, 50, 10, 30]
+```
+
+⚠️  Operations utiles sur listes de nombres
+``` python
+notes = [15, 18, 12, 9, 14]
+
+print(sum(notes))               # → 68  (somme)
+print(min(notes))               # → 9   (minimum)
+print(max(notes))               # → 18  (maximum)
+print(sum(notes) / len(notes))  # → 13.6 (moyenne)
+```
+
+
+---
+
+### 📦 Les listes imbriquees
+
+⚠️ Une liste peut contenir **d'autres listes** ! C'est ce qu'on appelle une liste à **deux dimensions** — très utilisé pour représenter des tableaux.
+
+
+#### 💡 <span style="color: cyan;">Exemple</span>
+
+``` python
+grille = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(grille[0])       # → [1, 2, 3]       (1ère ligne)
+print(grille[1][2])    # → 6               (2ème ligne, 3ème colonne)
+```
+
+
+---
+
+## 🔍 RECAP
+
+.append(x)      → ajoute x à la fin
+.insert(i, x)   → insère x à l'index i
+.remove(x)      → supprime la 1ère occurrence de x
+.pop()          → supprime et retourne le dernier élément
+.pop(i)         → supprime et retourne l'élément à l'index i
+.clear()        → vide la liste
+.index(x)       → retourne l'index de x
+.count(x)       → compte les occurrences de x
+.sort()         → trie dans l'ordre croissant
+.sort(reverse=True) → trie dans l'ordre décroissant
+.reverse()      → inverse l'ordre
+len(liste)      → nombre d'éléments
+sum(liste)      → somme (nombres uniquement)
+min(liste)      → valeur minimale
+max(liste)      → valeur maximale
+
+

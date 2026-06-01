@@ -51,3 +51,5 @@ PI = 5  # non !
 ``` python
 prenom = "Sara" # "Sara" est un objet de type str
 ```
+
+

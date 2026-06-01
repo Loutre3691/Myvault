@@ -18,7 +18,15 @@
 - lint: execute la commande flake8 . and mypy . `--warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs`
 -  lint-strict: optional execute `flake8 . and mypy . --strict`
 
+## 📦 Readme
 
+- login *  (This project has been created as part of the 42 curriculum by)*
+- “Description”
+- “Instructions”
+- “Resources”
+-  Parties supplementaire selon le projet
+-  detail algo
+-  documenter la representaiton visuelle et pk c'est mieu
 ## 📦 Directives supplementaires
 
 - creer des programmes tests pour verifier la fonctionnalite du projet, utilisation de framework comme 'pytest' ou 'unittest'
@@ -222,4 +230,57 @@ D1-goal D2-goal
 
 #### ➡️ <span style="color: purple;">INDICATEURS DE PERFORMANCES</span>
 
-- 
+###### <span style="color: cyan;">Performances attendues:</span>
+-  <span style="color: green;">Easy maps</span>: moins de `10 tours`
+-  <span style="color: yellow;">Medium maps</span>: entre `10 - 30 tours`
+-  <span style="color: red;">Hard maps</span>: moins de `60 tours`
+-  <span style="color: pink;">Challenger map (optionnal) : </span> viser à battre le record de référence de `45 tours`
+
+
+
+### 💡 <span style="color: cyan;">Aide de reference de performances</span>
+
+```
+• Easy Maps: 
+	◦ Linear path with 2 drones: Target ≤ 6 turns 
+	◦ Simple fork with 4 drones: Target ≤ 8 turns 
+	◦ Basic capacity with 4 drones: Target ≤ 6 turns
+• Medium Maps: 
+	◦ Dead end trap with 5 drones: Target ≤ 12 turns 
+	◦ Circular loop with 6 drones: Target ≤ 15 turns 
+	◦ Priority puzzle with 5 drones: Target ≤ 12 turns 
+• Hard Maps: 
+	◦ Maze nightmare with 8 drones: Target ≤ 30 turns 
+	◦ Capacity hell with 12 drones: Target ≤ 35 turns 
+	◦ Ultimate challenge with 15 drones: Target ≤ 45 turns 
+• Challenger Map (optional — for exceptional implementations):
+	◦ The Impossible Dream with 25 drones: Reference record: 45 turns 
+	◦ This quasi-unsolvable challenge is designed for algorithmic research and optimization 
+	◦ Solving this map demonstrates exceptional pathfinding and optimization skills 
+	◦ Note: This level is purely optional and does not affect
+```
+
+# 💡
+```
+•  l'algo peut il atteindre les seuils de performance?
+•  Comment votre solution se compare-t-elle aux cibles de référence ?
+•  Quelles optimisations avez-vous mises en œuvre pour obtenir de meilleures performances ? 
+•  Parviendrez-vous à résoudre la carte Challenger et à battre le record des 45 tours ?
+```
+
+
+
+# 3️⃣ BONUS
+
+
+Cette partie bonus ne sera examinée que si toutes les conditions obligatoires sont remplies. Voici les fonctionnalités que vous pouvez implémenter pour améliorer votre projet : 
+
+- `Performances exceptionnelles` : Vous atteignez parfaitement les objectifs de performance de référence pour toutes les cartes fournies. « Parfaitement » signifie que vous atteignez ou dépassez le nombre de tours cible. 
+
+
+- `Carte défi `: La carte « Impossible Dream » est résolue et bat le record de référence de 45 tours.
+
+
+#  4️⃣ EVALUATION
+
+Il y a une instruction dans la correction qui demande de modifier le code, se renseigner
